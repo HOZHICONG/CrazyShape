@@ -21,8 +21,13 @@ public final class MyAppGlideModule : AppGlideModule()
             setContentView(R.layout.activity_main)
 
             val shape =
-                intArrayOf(R.drawable.circle,R.drawable.square,R.drawable.triangle,R.drawable.star)
-            val i:Int = (0..3).random()
+                intArrayOf(
+                    R.drawable.circle,
+                    R.drawable.square,
+                    R.drawable.triangle,
+                    R.drawable.star
+                )
+            val i: Int = (0..3).random()
             imgNext.setImageResource(shape[i])
 
             val img: ImageView = findViewById(R.id.imgTitle)
@@ -43,11 +48,11 @@ public final class MyAppGlideModule : AppGlideModule()
                     return true
                 }
             })
-            imgNext.setOnClickListener(object :View.OnClickListener{
-                override fun onClick(p0:View?){
+            imgNext.setOnClickListener(object : View.OnClickListener {
+                override fun onClick(p0: View?) {
                     imgNext.setImageResource(shape[i])
                     recreate()
-                    fun  onClick(p0:View?){
+                    fun onClick(p0: View?) {
                         txvMsg.setOnClickListener(this)
                         recreate()
                     }
